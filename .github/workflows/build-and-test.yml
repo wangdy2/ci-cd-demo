@@ -2,12 +2,24 @@ name: Build and Test
 
 on:
   push:
-    branches: [ main ]  # Run workflow when code is pushed to the main branch
+    branches: [ main ]  # Run the workflow when code is pushed to the main branch
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # Step 1: Checkout code from the repository
+
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies..."
+          # Example for Node.js projects:
+          # npm install
+
+      - name: Run tests
+        run: |
+          echo "Running tests..."
+          # Example for Node.js projects:
+          # npm test
