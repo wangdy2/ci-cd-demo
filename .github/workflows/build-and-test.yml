@@ -12,8 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install dependencies # Install any required dependencies (e.g., npm install)
-
       - name: Run tests
         run: |
           echo "Running tests..."
